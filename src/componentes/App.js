@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import CarnetNuevo from '../paginas/CarnetNuevo'
 import Carnets from '../paginas/Carnets'
-import CarnetDetalles from '../paginas/CarnetDetalles'
+import CarnetDetalles from '../paginas/CarnetDetallesContenedor'
 import CarnetEditar from '../paginas/CarnetEditar'
 import Layout from './Layout';
 import NotFount from '../paginas/NotFount'
