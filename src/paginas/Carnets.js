@@ -66,7 +66,7 @@ class Carnets extends React.Component {
                 </div>
 
                 <div className='Badges__list'>
-                    <div className='Badges__container'>
+                    <div className='Badges__container' onKe>
                         <CarnetLista carnets={this.state.data} />
                         {this.state.loading && <MiniLoader/>}
                     </div>

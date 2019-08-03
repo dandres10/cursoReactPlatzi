@@ -5,7 +5,20 @@ import { Link } from 'react-router-dom'
 import Carnet from '../componentes/Carnet'
 
 import EliminarCarnetModal from '../componentes/EliminarCarnetModal'
+
+function useIncreaseCount(max){
+  const [count, setCount] = React.useState(0)
+  if (count>max) {
+      setCount(0)
+  }
+  return [count, setCount]
+}
+
+
+
 function CarnetDetalles(props) {
+    const [count,setCount] = useIncreaseCount(4)
+   
     const carnet = props.carnet;
     return (
         <div>
@@ -38,6 +51,12 @@ function CarnetDetalles(props) {
                         <h2>Acciones</h2>
                         <div>
                             <div>
+
+                                <button onClick={()=> {setCount(count+ 1)}} className='btn btn-primary mr-4'>
+                                    Incrementar el contador: {count}
+                                </button>
+
+
                                 <Link className="btn btn-primary mb-4"
                                     to={`/carnets/${carnet.id}/editar`}
                                 >
